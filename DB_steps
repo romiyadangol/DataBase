@@ -14,3 +14,36 @@ tables
 user_table
 select rows limit 2000
 //insert new row
+***********************************************************************************************************
+https://gist.github.com/
+************************
+new schema
+right click select as default schema
+new sql file copy paste
+exceute
+refresh
+tables
+right click
+select rows limit 2000
+******************************************
+new sql 
+write SELECT movie_title FROM movies;
+or SELECT movie_title,year FROM movies;
+then execute
+*************************
+SELECT * FROM movies;//show all the columns
+SELECT * FROM movies WHERE year = 1986;//show movies below 1986
+SELECT * FROM movies WHERE year >= 1986;
+SELECT * FROM movies WHERE year > 1979 AND year <=2000;
+*********************************
+relation of two table
+SELECT movies.movie_title,genres.genre_title FROM movies,genres
+**********************************
+select all without genre_id
+SELECT movies.movie_id,movies.movie_title,movies.director,movies.year FROM movies
+*********************************
+select Sci_Fi genre_title only
+SELECT movies.movie_title,genres.genre_title FROM movies,genres
+WHERE movies.movie_id = genres.genre_id AND genres.genre_title = "Sci-Fi"
+WHERE movies.movie_id = 1
+WHERE movies.genre_id = genres.genre_id
