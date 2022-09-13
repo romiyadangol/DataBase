@@ -47,3 +47,30 @@ SELECT movies.movie_title,genres.genre_title FROM movies,genres
 WHERE movies.movie_id = genres.genre_id AND genres.genre_title = "Sci-Fi"
 WHERE movies.movie_id = 1
 WHERE movies.genre_id = genres.genre_id
+*******************************************************************************************************************
+BY YEAR
+SELECT * FROM movies ORDER BY year ASC;
+SELECT * FROM movies ORDER BY year DESC;
+
+BY MOVIE_TITLE
+SELECT * FROM movies ORDER BY movie_title ASC;
+SELECT * FROM movies ORDER BY movie_title DESC;
+
+SELECT * FROM movies WHERE year < 2001;
+ SELECT * FROM movies WHERE year < 2001 ORDER BY year ASC;
+ 
+LIKE OPERATOR
+% = WILDCARD
+ SELECT * FROM movies WHERE movie_title LIKE "A%";//SELECT MOVIES FROM LETTER A
+ SELECT * FROM movies WHERE movie_title LIKE "%N";//MOVIES WHICH LETTER ENDS WITH N
+ SELECT * FROM movies WHERE year LIKE "19%";
+ 
+ //joining two tables whith JOIN
+ SELECT genres.*,movies.* 
+ FROM movies 
+ INNER JOIN genres 
+ 
+ //to insert
+ INSERT INTO  `account_table` (`Name`,`Address`,`Faculty`) 
+VALUES ("Romiya1","Manamiju","BIT")
+ ON movies.genre_id=genres.genre_id ;
