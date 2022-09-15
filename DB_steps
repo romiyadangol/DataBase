@@ -88,6 +88,8 @@ SELECT * FROM user_table;
 INSERT INTO user_table(`fname`,`lname`,`email`,`password`,`address`)
 VALUES
 ("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju"),
+("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju"),
+("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju");
 
 //first insert then select
 INSERT INTO user_table(`fname`,`lname`,`email`,`password`,`address`)
@@ -95,5 +97,12 @@ VALUES
 ("hari","dangol","dangolromiya@gmail.com","pass","manamaiju");
 
 SELECT * FROM user_table;
-("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju"),
-("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju");
+
+//UPDATE
+UPDATE user_table SET fname="romiya100" WHERE id=2;
+
+SELECT * FROM user_table;
+
+//DELETE
+DELETE FROM user_table WHERE id=2;
+SELECT * FROM user_table;
