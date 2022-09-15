@@ -69,8 +69,31 @@ LIKE OPERATOR
  SELECT genres.*,movies.* 
  FROM movies 
  INNER JOIN genres 
+ ON movies.genre_id=genres.genre_id ;
  
  //to insert
- INSERT INTO  `account_table` (`Name`,`Address`,`Faculty`) 
+ INSERT INTO  account_table(tablename)(`Name`,`Address`,`Faculty`) 
 VALUES ("Romiya1","Manamiju","BIT")
- ON movies.genre_id=genres.genre_id ;
+
+**********************************************************************************************************************
+//insert
+SELECT * FROM user_table;
+
+INSERT INTO user_table(`fname`,`lname`,`email`,`password`,`address`)
+VALUES("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju");
+
+//mulitiple insertion 
+SELECT * FROM user_table;
+
+INSERT INTO user_table(`fname`,`lname`,`email`,`password`,`address`)
+VALUES
+("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju"),
+
+//first insert then select
+INSERT INTO user_table(`fname`,`lname`,`email`,`password`,`address`)
+VALUES
+("hari","dangol","dangolromiya@gmail.com","pass","manamaiju");
+
+SELECT * FROM user_table;
+("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju"),
+("romiya","dangol","dangolromiya@gmail.com","pass","manamaiju");
