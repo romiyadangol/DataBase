@@ -119,3 +119,18 @@ mysql -u root -p
 password:
 **************
 \! cls =clear screen
+show databases;
+use store_db;
+show tables;
+
+
+SELECT * FROM table_name;
+********************************
+CREATE DATABASE test_db;
+SHOW DATABASES;
+USE test_db;
+create table user (id int, name varchar(45));
+show tables;
+desc user;=describe user
+Insert INTO table_name()values()
+SELECT * FROM table_name;
