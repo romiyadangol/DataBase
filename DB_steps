@@ -124,7 +124,7 @@ use store_db;
 show tables;
 
 
-SELECT * FROM table_name;
+SELECT * FROM table_name;(png)
 ********************************
 CREATE DATABASE test_db;
 SHOW DATABASES;
@@ -134,3 +134,55 @@ show tables;
 desc user;=describe user
 Insert INTO table_name()values()
 SELECT * FROM table_name;
+***********************************************************************************************************************************
+
+new query:(new query png)
+
+CREATE DATABASE mgmt_db;
+SHOW DATABASES;
+
+USE mgmt_db;
+-- this is for creating customer table
+CREATE TABLE customer(
+	id int not null auto_increment, 
+    name varchar(45) not null,
+    email varchar(45) not null,
+    address varchar(50),
+    primary key (id)
+);
+
+-- this is for product table
+CREATE TABLE product(
+	id int not null auto_increment,
+    name varchar(45) not null,
+    price decimal(5, 2),
+    primary key (id)
+);
+
+-- insert
+INSERT INTO customer(`name`, `email`, `address`)
+VALUES
+("ROMIYA","dangolromiya@gmail.com","manamaiju"),
+("Soniya", "dangolsoniya@gmail.com", "nayabazar"),
+("Hari", "dangolhari122@gmail.com", "lalitpur");
+SELECT * FROM customer;
+
+--new table for association of 2 tables:
+CREATE TABLE ordering(
+id int not null auto_increment,
+customer_id int not null,
+product_id int not null,
+foreign key(customer_id) references customer(id),
+foreign key(product_id) references product(id),
+primary key(id)
+);
+
+INSERT INTO ordering(`customer_id`, `product_id`)
+VALUES(1,1),
+(2,1);
+SELECT * FROM mgmt_db.ordering;
+
+SELECT customer.name,ordering.*
+ FROM customer 
+INNER JOIN ordering
+ON customer.id=ordering.customer_id;
