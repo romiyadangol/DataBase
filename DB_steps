@@ -5,7 +5,7 @@ MySQL Server
 MySQL Workbench
 MySQL Shell
 
-*************************************************************
+**********************************************************
 new_schema
 name and apply
 again apply and finish
@@ -14,7 +14,7 @@ tables
 user_table
 select rows limit 2000
 //insert new row
-************************************************************
+*********************************************************
 https://gist.github.com/
 ************************
 new schema
