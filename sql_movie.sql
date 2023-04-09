@@ -46,7 +46,7 @@ INSERT INTO `genres` (`genre_id`, `genre_title`) VALUES
 (7, 'Romance'),
 (8, 'Family');
 
--- -----------------------------------
+--
 --
 -- Table structure for table `movies`
 --
